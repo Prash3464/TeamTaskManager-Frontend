@@ -98,7 +98,7 @@ window.updateStatus = async (taskId, newStatus) => {
 document.getElementById('logout-btn').addEventListener('click', async () => {
     await apiRequest("accounts/api/logout/", "POST");
     document.cookie = "access_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    window.location.href = "../home.HTML";
+    window.location.href = "../index.html";
 });
 
 // open manu

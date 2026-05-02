@@ -20,6 +20,6 @@ export async function protectPage(adminOnly = false) {
 
         return data; // User ka data return karo taaki page use kar sake
     } catch (err) {
-        window.location.href = "../home.HTML";
+        window.location.href = "../index.html";
     }
 }

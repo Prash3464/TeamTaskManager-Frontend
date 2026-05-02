@@ -5,7 +5,7 @@ async function init() {
         // 1. Auth Check
         const authData = await apiRequest("accounts/api/check-auth/");
         if (!authData || !authData.is_logged_in) {
-            window.location.href = "../home.HTML";
+            window.location.href = "../index.html";
             return;
         }
 
@@ -82,7 +82,7 @@ document.getElementById('create-project-btn').addEventListener('click', async ()
 document.getElementById('logout-btn').addEventListener('click', async () => {
     await apiRequest("accounts/api/logout/", "POST");
     document.cookie = "access_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    window.location.href = "../home.HTML";
+    window.location.href = "../index.html";
 });
 
 // open manu
