@@ -1,6 +1,7 @@
-const BASE_URL = "http://127.0.0.1:8000"; // Aapka Django Server Address
+// const BASE_URL = "http://127.0.0.1:8000"; // Aapka Django Server Address
 // const BASE_URL = "http://192.168.137.1:8000"; //public network ip
 // const BASE_URL = "http://10.94.156.38:8000";// mobile network ip
+const BASE_URL = "https://teamtaskmanager-backend.onrender.com";//backend server deploy url
 
 /**
  * Common function for all API calls
