@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillTrack | Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">TeamTask</div>
+                <button id="menu-toggle" class="menu-toggle">☰</button>
+            </div>
+            <nav class="sidebar-nav">
+                <button class="nav-btn active" data-target="dashboard">Dashboard</button>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="user-profile">
+                    
+                        <h2 id="welcome-name">Hi, Loading...</h2>
+                        <span id="user-role-badge" class="badge">Role</span>
+                </div>
+            </header>
+
+        <!-- Create Project Section (Any user can create to become Admin) -->
+            <section class="create-proj-section">
+                <h3>Start a New Project</h3>
+                <div class="create-input-section" style="display: flex; gap: 10px; margin-top: 10px; ">
+                    <input type="text" id="new-project-name" placeholder="Project Name" style="flex: 1; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                    <textarea type="text" id="new-project-desc" placeholder="Project Description" style="flex: 1; padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+                    <button class="btn btn-primary" id="create-project-btn">Create Project</button>
+                </div>
+            </section>
+            <!-- Stats Overview -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Projects</h3>
+                    <p id="stat-total-projects">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending Tasks</h3>
+                    <p id="stat-pending-tasks">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Overdue</h3>
+                    <p id="stat-overdue-tasks" style="color: red;">0</p>
+                </div>
+                <div class="stat-card">
+        <h3>Completed Tasks</h3>
+        <p id="stat-done-tasks" style="color: green;">0</p>
+    </div>
+            </div>
+<!-- Tasks Per User Section -->
+<section class="user-tasks-section" style="margin-top: 20px;">
+    <h3>Tasks Per User</h3>
+    <ul id="user-tasks-list" class="user-stats-list">
+        <!-- JS se data yahan aayega -->
+        <p>Loading member stats...</p>
+    </ul>
+</section>
+            <!-- Projects List Section -->
+            <section class="projects-section">
+                <h3>My Projects</h3>
+                <div id="project-list" class="project-grid">
+                    <p>Loading projects...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script type="module" src="../js/dashboard.js"></script>
+</body>
+
+</html>

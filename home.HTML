@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://127.0.0.1:8000; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' http://10.94.156.38:8000 http://127.0.0.1:8000 http://127.0.0.1:5500;">
+    <link rel="stylesheet" href="css\home.css">
+    <title>Online Learning Plateform</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Team Task Manage</h1>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <nav class="nav-menu">
+            <button class="btn" id="admin-dashboard-link" style="display: none;">Dashboard</button>
+            <button class="btn" id="btn-login-modal">Login</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to Team Task Manage</h2>
+        <p>Create project, asign task, track progress of task, and reach the leaderboard!</p>
+        <button class="btn start-btn" id="start-btn">Get Started</button>
+    </section>
+
+    <!-- Login/Signup Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content" id="login-form">
+            <span style="float:right; cursor:pointer; font-size:20px;" onclick="closeModal()">✖</span>
+            <h2>Login</h2>
+            <input type="text" placeholder="Username" id="login-username">
+            <input type="password" placeholder="Password" id="login-password">
+            <button id="submit-login">Login</button>
+            <span class="toggle-form" id="switch-to-signup">Create New Account</span>
+        </div>
+        <div class="modal-content" id="signup-form" style="display:none;">
+            <span style="float:right; cursor:pointer; font-size:20px;" onclick="closeModal()">✖</span>
+            <h2>Sign Up</h2>
+            <input type="text" placeholder="StudentName" id="signup-studentname">
+            <input type="text" placeholder="Username" id="signup-username">
+            <p id="msg"></p>
+            <input type="email" id="signup-email" name="email" placeholder="Email" />
+            <input type="password" placeholder="Password" id="signup-password">
+            <button id="submit-signup">Sign Up</button>
+            <span class="toggle-form" id="switch-to-login">Already have account? Login</span>
+        </div>
+    </div>
+    <footer>
+        <p>© <span id="year"></span> SkillTrack Academy | All Rights Reserved</p>
+        <p>Follow us:
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">LinkedIn</a>
+        </p>
+    </footer>
+
+    <script type="module" src="js\home.js"></script>
+</body>
+
+</html>
