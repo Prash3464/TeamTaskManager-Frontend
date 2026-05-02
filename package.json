@@ -7,6 +7,6 @@
     "start": "serve -s . -l $PORT --single"
   },
   "dependencies": {
-    "serve": "^14.2.0"
+    "serve": "^14.2.6"
   }
 }
