@@ -4,7 +4,7 @@
   "description": "Frontend for Task Manager",
   "main": "home.html",
   "scripts": {
-    "start": "serve -s . -l $PORT"
+    "start": "serve -s . -l $PORT --single"
   },
   "dependencies": {
     "serve": "^14.2.0"
