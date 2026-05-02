@@ -199,15 +199,13 @@ async function updateAuthUI() {
 async function logout() {
     try {
         const result = await apiRequest("accounts/api/logout/", "POST");
-        if (result.msg) {
-            // alert("Logged out successfully!");
-            // Browser se cookie hatane ki koshish (Security ke liye backend se delete hona best hai)
-            document.cookie = "access_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-            window.location.reload(); // Page reload hote hi button "Login" ho jayega
+        if (result.msg || result.success) {
+            console.log("Logout successful");
+            // JavaScript se cookie delete karne ki koshish karne ki zarurat nahi hai (wo kaam nahi karega)
+            window.location.reload(); // Seedha login page par bhejein ya reload karein
         }
     } catch (err) {
         console.error("Logout Error:", err);
-        document.cookie = "access_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         window.location.reload()
     }
 }
