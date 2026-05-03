@@ -136,7 +136,7 @@ async function login() {
             closeModal();
             
             // User ko dashboard ya home page par bhejein
-            window.location.href = "../home.HTML"; 
+            window.location.href = "../index.html"; 
         } else {
             // alert(data.error || "Invalid Credentials");
             console.error(data.error || "Invalid Credentials")
