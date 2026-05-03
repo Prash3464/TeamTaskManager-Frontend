@@ -1,8 +1,8 @@
 {
-  "name": "teamtaskmanager-frontend",
+  "name": "TeamTaskManager-Frontend",
   "version": "1.0.0",
   "description": "Frontend for Task Manager",
-  "main": "home.html",
+  "main": "index.html",
   "scripts": {
     "start": "serve -s . -l $PORT --single"
   },
