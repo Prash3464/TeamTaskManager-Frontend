@@ -128,7 +128,7 @@ async function login() {
 
     try {
         const data = await apiRequest('accounts/api/login/', "POST", {username:u,password:p});
-        console.log(data)
+        // console.log(data)
 
         if (data.msg === "Login Success") {
             // alert("Login Successful! Redirecting...");
