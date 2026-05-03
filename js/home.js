@@ -170,7 +170,7 @@ async function updateAuthUI() {
                 
                 // Admin dashboard par redirect karne ka logic
                 if (adminLink) {
-                    adminLink.onclick = () => window.location.href = "/pages/dashboard.html";
+                    adminLink.onclick = () => window.location.href = "../pages/dashboard.html";
                 }
             } else {
                 console.log("Welcome, Student!");
@@ -178,7 +178,7 @@ async function updateAuthUI() {
                 if (adminLink) adminLink.style.display = "block";
 
                 if (adminLink) {
-                    adminLink.onclick = () => window.location.href = "/pages/dashboard.html";
+                    adminLink.onclick = () => window.location.href = "../pages/dashboard.html";
                 }
             }
         } else {
@@ -328,7 +328,7 @@ document.getElementById('start-btn')?.addEventListener('click', async () => {
 
     if (isLoggedIn) {
         // Agar login hai toh seedha Dashboard
-        window.location.href = "/pages/dashboard.html";
+        window.location.href = "../pages/dashboard.html";
     } else {
         // Agar login nahi hai toh Login Modal kholo
         btn.innerText = "Get Started"; // Button text wapas sahi karo
